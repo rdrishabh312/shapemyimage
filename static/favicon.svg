@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- solid black background tile -->
+  <rect width="48" height="48" rx="12" fill="#000000"/>
+
+  <!-- central shaped photo -->
+  <rect x="16" y="16" width="16" height="16" rx="4.5" fill="#FFFFFF"/>
+
+  <!-- 4 corner framing curved brackets -->
+  <path d="M 9 20 V 17 C 9 12.58 12.58 9 17 9 H 20" stroke="#FFFFFF" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 28 9 H 31 C 35.42 9 39 12.58 39 17 V 20" stroke="#FFFFFF" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 39 28 V 31 C 39 35.42 35.42 39 31 39 H 28" stroke="#FFFFFF" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 20 39 H 17 C 12.58 39 9 35.42 9 31 V 28" stroke="#FFFFFF" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

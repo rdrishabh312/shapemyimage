@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: security vulnerability
+    url: https://github.com/rdrishabh312/shapemyimage/security/advisories/new
+    about: please report security vulnerabilities privately via github advisory.
