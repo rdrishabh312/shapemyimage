@@ -1,0 +1,43 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: test-suite
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: setup rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: setup node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: install python test dependencies
+        run: pip install pillow
+
+      - name: run rust tests
+        run: cargo test --verbose
+
+      - name: run frontend logic tests
+        run: node scripts/test_runner.js
+
+      - name: run viewport responsive tests
+        run: node scripts/test_viewports.js
+
+      - name: run png alpha export tests
+        run: python3 scripts/test_png_export.py

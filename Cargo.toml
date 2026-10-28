@@ -1,0 +1,28 @@
+[package]
+name = "shapemyimage"
+version = "1.0.0"
+edition = "2024"
+authors = ["rdrishabh312"]
+description = "Production-ready image shaping tool - Make every image fit your shape."
+license = "MIT"
+readme = "README.md"
+homepage = "https://smi.vridhika.com/"
+documentation = "https://github.com/rdrishabh312/shapemyimage#readme"
+repository = "https://github.com/rdrishabh312/shapemyimage"
+keywords = ["image", "crop", "shapes", "png", "web"]
+categories = ["graphics", "web-programming"]
+
+[dependencies]
+axum = "0.8"
+tokio = { version = "1.43", features = ["full"] }
+tower = { version = "0.5", features = ["util"] }
+tower-http = { version = "0.6", features = ["fs", "cors", "trace", "set-header", "limit", "compression-gzip"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp", "bmp"] }
+
+[dev-dependencies]
+tower = { version = "0.5", features = ["util"] }
+http-body-util = "0.1"

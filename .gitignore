@@ -1,0 +1,32 @@
+# rust build artifacts
+/target
+**/*.rs.bk
+
+# test outputs and scratch data
+test_output/
+*.log
+*.tmp
+*.temp
+*.bak
+
+# operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ide and editor configs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# node.js and python cache files
+node_modules/
+__pycache__/
+*.pyc
+
+# environment and local secrets
+.env
+.env.*
+!.env.example
